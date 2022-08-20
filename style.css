@@ -1,0 +1,55 @@
+/* body {
+    background-image: url("https://image.shutterstock.com/image-photo/light-bulbs-on-dark-wooden-260nw-354086042.jpg");
+    background-repeat: no-repeat;
+    min-height: 100vh;
+    min-width: 100%;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    } */
+.maindiv {
+  height: 100vh;
+  width: 100%;
+}
+#error {
+  color: red;
+}
+#textDiv {
+  margin-top: 10px;
+}
+.container {
+  max-width: 850px !important;
+}
+ul {
+  margin: 0;
+  padding: 0;
+}
+li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 12px;
+  padding: 8px;
+  border-radius: 5px;
+  list-style-type: none;
+  background-color: aqua;
+  word-break: break-all;
+}
+.btn-primary {
+  margin-left: 5px !important;
+}
+@media only screen and (max-width: 550px) {
+  li {
+    display: block;
+  }
+  .span1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .span2 {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+  }
+}
