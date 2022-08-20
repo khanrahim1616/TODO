@@ -1,13 +1,17 @@
-var formdata = [];
+
+var formdata =  localStorage.getItem("data")
+  ? JSON.parse(localStorage.getItem("data"))
+  : [];
+
 localStorage.getItem("lastname");
 function Add() {
-  console.log("add function");
   document.getElementById("error").innerHTML = "";
   var input = document.getElementById("Input").value.trim();
   if (input == "") {
     document.getElementById("error").innerHTML = "! Plz enter some text";
   } else {
     formdata.push(input);
+    localStorage.setItem("data", JSON.stringify(formdata));
     render();
   }
   document.getElementById("Input").value = "";
@@ -40,10 +44,12 @@ function render() {
   textDiv.innerHTML = "";
   textDiv.appendChild(ul);
 }
+render();
 function dlete(index) {
   formdata.splice(index, 1);
   var textDiv = document.getElementById("textDiv");
   textDiv.innerHTML = "";
+  localStorage.setItem("data", JSON.stringify(formdata));
   render();
 }
 var hello;
@@ -67,15 +73,14 @@ function edit(index) {
   document.getElementById("Input").value = formdata[index];
 }
 function update() {
-  console.log("update function");
   var input = document.getElementById("Input").value.trim();
-  console.log(input, "input");
   if (input == "") {
     document.getElementById("error").innerHTML = "! Plz enter some text";
   } else {
     formdata.splice(hello, 1, input);
     var textDiv = document.getElementById("textDiv");
     textDiv.innerHTML = "";
+    localStorage.setItem("data", JSON.stringify(formdata));
     render();
     document.getElementById("error").innerHTML = "";
     document.getElementById("formid").onsubmit = Add;
