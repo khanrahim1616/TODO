@@ -1,12 +1,3 @@
-/* body {
-    background-image: url("https://image.shutterstock.com/image-photo/light-bulbs-on-dark-wooden-260nw-354086042.jpg");
-    background-repeat: no-repeat;
-    min-height: 100vh;
-    min-width: 100%;
-    background-size: cover;
-    background-position: center;
-    background-attachment: fixed;
-    } */
 .maindiv {
   height: 100vh;
   width: 100%;
@@ -38,6 +29,9 @@ li {
 .btn-primary {
   margin-left: 5px !important;
 }
+.span1 {
+width: 72%;
+}
 @media only screen and (max-width: 550px) {
   li {
     display: block;
@@ -46,6 +40,7 @@ li {
     display: flex;
     justify-content: center;
     align-items: center;
+  width: auto;
   }
   .span2 {
     display: flex;

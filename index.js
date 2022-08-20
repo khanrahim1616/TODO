@@ -10,7 +10,7 @@ function Add() {
   if (input == "") {
     document.getElementById("error").innerHTML = "! Plz enter some text";
   } else {
-    formdata.push(input);
+    formdata.unshift(input);
     localStorage.setItem("data", JSON.stringify(formdata));
     render();
   }
